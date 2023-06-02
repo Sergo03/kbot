@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: "sergo03"
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.5-2701ad5"
+  tag: "v1.0.1-7a7c85a"
   arch: amd64
 
 secret:
