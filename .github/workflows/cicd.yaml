@@ -13,10 +13,11 @@ jobs:
          
         - name: Run test
           run: make test  
-        - name: 'Authenticate to GHCR'
-          uses: actions/labeler@v2
-          with:
-            repo-token: ${{ secrets.GITHUB_TOKEN }}
+        - name: Create a Release
+          id: create_release
+          uses: actions/create-release@v1
+          env:
+            GITHUB_TOKEN: ${{ github.token }}
         
           
       
