@@ -20,6 +20,7 @@ jobs:
           with:
             repo-token: ${{ secrets.GITHUB_TOKEN }}
         - name: Build&Push
+          env:
             APP: "kbot"
             REGISTRY: "ghcr.io"
           run: make image push
