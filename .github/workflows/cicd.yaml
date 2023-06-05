@@ -24,7 +24,7 @@ jobs:
         - name: Build&Push
           env:
             APP: "kbot"
-            REGISTRY: "ghcr.io/Sergo03"
+            REGISTRY: "ghcr.io/sergo03"
           run: make image push
         
           
