@@ -10,13 +10,14 @@ jobs:
       steps:
         - name: Checkout
           uses: actions/checkout@v3
+         
 
         - name: Run test
-          run: make test 
-        - id: 'auth' 
-          name: 'Authenticate to Google Cloud'
-          uses: 'google-github-actions/auth@v1'
-          with:
-            token_format: '${{ secrets.GCLOUD_SERVICE_KEY }}'
+          run: make test  
+        - name: 'Authenticate to GHCR'
+          uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+        
           
       
