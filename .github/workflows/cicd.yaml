@@ -13,3 +13,12 @@ jobs:
 
         - name: Run test
           run: make test 
+        - name: Authenticate to Google Cloud
+          id: auth
+        - uses: RafikFarhad/push-to-gcr-github-action@v5-beta
+        with:
+          gcloud_service_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          registry: gcr.io
+          project_id: telegram-bot-385708
+          
+      
