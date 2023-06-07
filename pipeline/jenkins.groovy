@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo "TEST EXEC"
 
-                sh 'go test -v'
+                sh 'make test'
 
             }
         }
