@@ -4,11 +4,11 @@
 
 replicaCount: 1
 image:
-  repository: "sergo03"
+  repository: "ghcr.io/sergo03"
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.1"
+  tag: "v1.0.3-838da99"
   os: "linux"
-  arch: amd64
+  arch: "amd64"
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
